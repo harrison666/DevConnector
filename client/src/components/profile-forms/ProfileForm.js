@@ -31,7 +31,7 @@ const ProfileForm = ({
 }) => {
   const [formData, setFormData] = useState(initialState);
 
-  //const creatingProfile = useMatch("/create-profile");
+  const creatingProfile = useMatch("/create-profile");
 
   const [displaySocialInputs, toggleSocialInputs] = useState(false);
 
@@ -85,13 +85,13 @@ const ProfileForm = ({
   return (
     <section className="container">
       <h1 className="large text-primary">
-        {/* {creatingProfile ? "Create Your Profile" : "Edit Your Profile"} */}
+        {creatingProfile ? "Create Your Profile" : "Edit Your Profile"}
       </h1>
       <p className="lead">
         <i className="fas fa-user" />
-        {/* {creatingProfile
+        {creatingProfile
           ? ` Let's get some information to make your`
-          : " Add some changes to your profile"} */}
+          : " Add some changes to your profile"}
       </p>
       <small>* = required field</small>
       <form className="form" onSubmit={onSubmit}>

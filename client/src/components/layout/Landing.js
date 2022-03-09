@@ -5,7 +5,7 @@ import Dashboard from "../dashboard/Dashboard";
 
 const Landing = ({ isAuthenticated }) => {
   if (isAuthenticated) {
-    return <Navigate to={Dashboard} />;
+    return <Navigate to="/dashboard" />;
   }
   return (
     <section className="landing">
